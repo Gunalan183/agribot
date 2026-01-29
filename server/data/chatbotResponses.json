@@ -1,0 +1,58 @@
+{
+  "greetings": {
+    "keywords": ["hello", "hi", "hey", "good morning", "good afternoon"],
+    "responses": [
+      "Hello farmer! 👋 How can I help you today?",
+      "Hi there! 🌱 Ready to assist with your farming queries!",
+      "Good day! 🚜 What agricultural advice do you need?",
+      "Namaste! 🙏 How can I support your farming journey today?"
+    ]
+  },
+  "crop_advice": {
+    "keywords": ["crop", "plant", "cultivation", "grow", "farming", "seed"],
+    "responses": [
+      "I can help you choose the right crop! Tell me about your soil type, season, temperature, and rainfall.",
+      "For crop recommendations, please share: soil type (clay/loamy/sandy/red/black/alluvial), season (kharif/rabi/year-round), temperature range, and rainfall details.",
+      "Looking for crop advice? I need information about your local conditions to suggest the best crops for your farm."
+    ]
+  },
+  "disease_help": {
+    "keywords": ["disease", "sick", "problem", "issue", "leaf", "spot", "yellow", "brown", "wilt", "infection"],
+    "responses": [
+      "Concerned about plant diseases? Please upload a clear photo of the affected plant part for diagnosis.",
+      "I can help identify plant diseases! Upload an image showing the symptoms clearly.",
+      "For disease identification, please share a photo of the affected leaves, stems, or fruits."
+    ]
+  },
+  "weather": {
+    "keywords": ["weather", "temperature", "rain", "climate", "season"],
+    "responses": [
+      "Weather affects farming greatly! For crop planning, I need to know your local temperature range and rainfall patterns.",
+      "Climate information helps in crop selection. Please tell me about your area's typical weather conditions.",
+      "Weather plays a crucial role in agriculture. Share your temperature and rainfall details for better recommendations."
+    ]
+  },
+  "fertilizer": {
+    "keywords": ["fertilizer", "manure", "nutrient", "soil", "nitrogen", "phosphorus", "potassium"],
+    "responses": [
+      "Proper fertilization is key to good yields! Different crops need different nutrients. What crop are you growing?",
+      "Fertilizer requirements vary by crop type. Tell me which crop you're cultivating for specific advice.",
+      "Nutrient management is crucial! I can suggest appropriate fertilizers once you share your crop details."
+    ]
+  },
+  "general_agriculture": {
+    "keywords": ["farm", "agriculture", "cultivate", "harvest", "yield", "irrigation", "pest", "weed"],
+    "responses": [
+      "I'm here to help with all your agricultural needs! From crop selection to pest management.",
+      "Farming support available 24/7! Ask me about crops, diseases, fertilizers, or any farming techniques.",
+      "Your agricultural assistant is ready! Whether it's crop advice, disease identification, or farming tips."
+    ]
+  },
+  "fallback": {
+    "responses": [
+      "I'm still learning about agriculture! Could you rephrase your question or ask about crops, diseases, or farming practices?",
+      "Let me help you better! I specialize in crop recommendations, disease identification, and farming advice.",
+      "I understand you need farming assistance! Please ask specifically about crops, plant diseases, or agricultural practices."
+    ]
+  }
+}

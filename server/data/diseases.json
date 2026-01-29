@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Leaf Blight",
+    "symptoms": "Yellow spots on leaves that turn brown, wilting of leaves",
+    "treatment": "Apply copper oxychloride spray, remove infected leaves, ensure proper spacing",
+    "prevention": "Crop rotation, resistant varieties, proper drainage"
+  },
+  {
+    "id": 2,
+    "name": "Powdery Mildew",
+    "symptoms": "White powdery coating on leaves, stunted growth",
+    "treatment": "Spray sulfur or neem oil, improve air circulation",
+    "prevention": "Avoid overhead watering, proper plant spacing"
+  },
+  {
+    "id": 3,
+    "name": "Rust Disease",
+    "symptoms": "Orange or reddish-brown pustules on leaves",
+    "treatment": "Apply fungicides containing propiconazole, remove affected parts",
+    "prevention": "Use disease-free seeds, crop rotation"
+  },
+  {
+    "id": 4,
+    "name": "Root Rot",
+    "symptoms": "Wilting despite adequate water, dark mushy roots",
+    "treatment": "Improve drainage, apply Trichoderma formulation",
+    "prevention": "Avoid waterlogging, use well-draining soil"
+  },
+  {
+    "id": 5,
+    "name": "Bacterial Wilt",
+    "symptoms": "Sudden wilting of leaves, sticky bacterial ooze from cut stems",
+    "treatment": "Remove infected plants, soil solarization",
+    "prevention": "Use disease-free seeds, crop rotation with non-host crops"
+  },
+  {
+    "id": 6,
+    "name": "Fusarium Wilt",
+    "symptoms": "Yellowing of lower leaves, vascular discoloration",
+    "treatment": "Soil fumigation, resistant varieties",
+    "prevention": "Long crop rotation, soil sterilization"
+  },
+  {
+    "id": 7,
+    "name": "Anthracnose",
+    "symptoms": "Dark sunken lesions on fruits and leaves",
+    "treatment": "Apply carbendazim spray, remove infected plant parts",
+    "prevention": "Proper sanitation, avoid overhead irrigation"
+  },
+  {
+    "id": 8,
+    "name": "Downy Mildew",
+    "symptoms": "Yellow patches on upper leaf surface, purplish growth underneath",
+    "treatment": "Metalaxyl-based fungicides, improve air circulation",
+    "prevention": "Resistant varieties, proper plant spacing"
+  }
+]

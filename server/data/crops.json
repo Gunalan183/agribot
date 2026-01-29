@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Rice",
+    "soilType": "clay",
+    "season": "kharif",
+    "temperatureMin": 20,
+    "temperatureMax": 35,
+    "rainfallMin": 1000,
+    "rainfallMax": 2500,
+    "fertilizer": "Nitrogen rich fertilizer (Urea 46%)",
+    "description": "Requires flooded fields and warm climate"
+  },
+  {
+    "id": 2,
+    "name": "Wheat",
+    "soilType": "loamy",
+    "season": "rabi",
+    "temperatureMin": 10,
+    "temperatureMax": 25,
+    "rainfallMin": 500,
+    "rainfallMax": 1000,
+    "fertilizer": "Phosphorus and Potassium rich fertilizer (DAP + MOP)",
+    "description": "Grows well in cool season with moderate rainfall"
+  },
+  {
+    "id": 3,
+    "name": "Maize",
+    "soilType": "loamy",
+    "season": "kharif",
+    "temperatureMin": 21,
+    "temperatureMax": 30,
+    "rainfallMin": 600,
+    "rainfallMax": 1200,
+    "fertilizer": "Balanced NPK fertilizer (120:60:40 kg/ha)",
+    "description": "Needs well-drained soil and warm weather"
+  },
+  {
+    "id": 4,
+    "name": "Cotton",
+    "soilType": "black",
+    "season": "kharif",
+    "temperatureMin": 20,
+    "temperatureMax": 30,
+    "rainfallMin": 500,
+    "rainfallMax": 1000,
+    "fertilizer": "High nitrogen and potassium (120:60:60 kg/ha)",
+    "description": "Thrives in black cotton soil with good drainage"
+  },
+  {
+    "id": 5,
+    "name": "Sugarcane",
+    "soilType": "alluvial",
+    "season": "year-round",
+    "temperatureMin": 20,
+    "temperatureMax": 35,
+    "rainfallMin": 1000,
+    "rainfallMax": 1500,
+    "fertilizer": "High nitrogen requirement (200:100:100 kg/ha)",
+    "description": "Requires abundant water and fertile alluvial soil"
+  },
+  {
+    "id": 6,
+    "name": "Groundnut",
+    "soilType": "sandy",
+    "season": "kharif",
+    "temperatureMin": 20,
+    "temperatureMax": 30,
+    "rainfallMin": 500,
+    "rainfallMax": 750,
+    "fertilizer": "Low nitrogen, high phosphorus (20:40:20 kg/ha)",
+    "description": "Prefers light sandy soil with good drainage"
+  },
+  {
+    "id": 7,
+    "name": "Pulses",
+    "soilType": "red",
+    "season": "rabi",
+    "temperatureMin": 15,
+    "temperatureMax": 25,
+    "rainfallMin": 400,
+    "rainfallMax": 800,
+    "fertilizer": "Moderate nitrogen, high phosphorus (20:40:20 kg/ha)",
+    "description": "Suitable for red lateritic soils"
+  },
+  {
+    "id": 8,
+    "name": "Millets",
+    "soilType": "sandy",
+    "season": "kharif",
+    "temperatureMin": 25,
+    "temperatureMax": 35,
+    "rainfallMin": 400,
+    "rainfallMax": 700,
+    "fertilizer": "Low fertility requirement (40:20:20 kg/ha)",
+    "description": "Drought-resistant crop for arid regions"
+  }
+]
