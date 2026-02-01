@@ -29,8 +29,8 @@ if (!fs.existsSync(uploadsDir)) {
 // Routes
 app.use('/api', agriRoutes);
 
-// Root route
-app.get('/', (req, res) => {
+// Root API route
+app.get('/api', (req, res) => {
     res.json({
         message: "🌱 Welcome to AgriBot API!",
         description: "Intelligent Chatbot for Farmers",
@@ -45,16 +45,14 @@ app.get('/', (req, res) => {
     });
 });
 
-// Serve React app for all non-API routes
-app.get('*', (req, res) => {
-    // Don't serve React app for API routes
-    if (req.path.startsWith('/api')) {
-        return res.status(404).json({
-            success: false,
-            message: 'API route not found!'
-        });
+// Handle React Router - serve index.html for all non-API routes
+app.use((req, res, next) => {
+    // Skip if it's an API route
+    if (req.path.startsWith('/api/')) {
+        return next();
     }
     
+    // Serve React app
     const indexPath = path.join(__dirname, '../client/dist/index.html');
     if (fs.existsSync(indexPath)) {
         res.sendFile(indexPath);
