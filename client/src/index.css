@@ -2,86 +2,163 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles for agricultural theme */
+/* Custom styles for farmer-friendly agricultural theme */
 @layer components {
   .agri-card {
-    @apply bg-white rounded-xl shadow-lg p-6 border border-green-100 hover:shadow-xl transition-all duration-300;
+    @apply bg-white rounded-3xl shadow-farmer-lg p-8 border-2 border-agri-light hover:shadow-farmer-xl transition-all duration-300 hover:border-agri-accent;
   }
   
   .agri-button {
-    @apply bg-agri-green hover:bg-agri-dark text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-agri-green focus:ring-opacity-50 min-h-[56px];
+    @apply bg-agri-green hover:bg-agri-dark text-white font-bold py-5 px-10 rounded-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-agri-accent focus:ring-opacity-50 min-h-[64px] text-farmer-lg shadow-farmer;
+  }
+  
+  .agri-button-secondary {
+    @apply bg-agri-accent hover:bg-agri-green text-white font-bold py-5 px-10 rounded-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-agri-accent focus:ring-opacity-50 min-h-[64px] text-farmer-lg shadow-farmer;
+  }
+  
+  .agri-button-outline {
+    @apply border-2 border-agri-green text-agri-green hover:bg-agri-green hover:text-white font-bold py-5 px-10 rounded-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-agri-accent focus:ring-opacity-50 min-h-[64px] text-farmer-lg shadow-farmer;
   }
   
   .agri-input {
-    @apply w-full px-4 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-agri-green focus:border-agri-green outline-none text-lg min-h-[56px];
+    @apply w-full px-6 py-5 border-2 border-gray-300 rounded-2xl focus:ring-4 focus:ring-agri-accent focus:border-agri-accent outline-none text-farmer min-h-[64px] shadow-farmer bg-white;
   }
   
   .agri-select {
-    @apply w-full px-4 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-agri-green focus:border-agri-green outline-none text-lg bg-white min-h-[56px];
+    @apply w-full px-6 py-5 border-2 border-gray-300 rounded-2xl focus:ring-4 focus:ring-agri-accent focus:border-agri-accent outline-none text-farmer bg-white min-h-[64px] shadow-farmer;
   }
   
   .chat-bubble-user {
-    @apply bg-agri-green text-white rounded-2xl px-6 py-4 max-w-xs ml-auto shadow-md;
+    @apply bg-agri-green text-white rounded-3xl px-8 py-5 max-w-sm ml-auto shadow-farmer-lg text-farmer;
   }
   
   .chat-bubble-bot {
-    @apply bg-gray-100 text-gray-800 rounded-2xl px-6 py-4 max-w-xs mr-auto shadow-sm border border-gray-200;
+    @apply bg-agri-cream text-gray-800 rounded-3xl px-8 py-5 max-w-sm mr-auto shadow-farmer border-2 border-agri-light text-farmer;
   }
   
   .nav-link {
-    @apply px-4 py-3 rounded-lg hover:bg-white hover:bg-opacity-20 transition-all duration-200 text-white font-medium;
+    @apply px-4 py-3 rounded-xl hover:bg-white hover:bg-opacity-20 transition-all duration-200 text-white font-semibold text-farmer flex items-center justify-center whitespace-nowrap;
+  }
+  
+  .nav-link-compact {
+    @apply px-3 py-2 rounded-lg hover:bg-white hover:bg-opacity-20 transition-all duration-200 text-white font-semibold text-sm flex items-center justify-center whitespace-nowrap;
   }
   
   .lang-toggle {
-    @apply bg-white text-agri-green border-2 border-agri-green px-4 py-3 rounded-xl font-semibold hover:bg-agri-green hover:text-white transition-all duration-300;
+    @apply bg-white text-agri-green border-2 border-agri-green px-6 py-4 rounded-2xl font-bold hover:bg-agri-green hover:text-white transition-all duration-300 text-farmer min-h-[56px] shadow-farmer;
+  }
+  
+  .lang-toggle-compact {
+    @apply bg-white text-agri-green border-2 border-agri-green px-3 py-2 rounded-lg font-bold hover:bg-agri-green hover:text-white transition-all duration-300 text-sm shadow-farmer;
   }
   
   .form-label {
-    @apply block font-semibold text-gray-700 mb-2 text-lg;
+    @apply block font-bold text-gray-800 mb-3 text-farmer-lg;
   }
   
   .form-group {
-    @apply mb-6;
+    @apply mb-8;
   }
   
   .feature-icon {
-    @apply text-4xl mb-4 block text-center;
+    @apply text-6xl mb-6 block text-center;
   }
   
   .hero-icon {
-    @apply text-5xl mb-6 block text-center;
+    @apply text-7xl mb-8 block text-center;
   }
   
   .checkmark {
-    @apply text-agri-green font-bold mr-2 text-xl;
+    @apply text-agri-green font-bold mr-3 text-2xl;
   }
   
   .alert-success {
-    @apply bg-green-50 border border-green-200 text-green-800 px-6 py-4 rounded-xl mb-6;
+    @apply bg-green-50 border-2 border-green-300 text-green-800 px-8 py-6 rounded-3xl mb-8 shadow-farmer text-farmer;
   }
   
   .alert-error {
-    @apply bg-red-50 border border-red-200 text-red-800 px-6 py-4 rounded-xl mb-6;
+    @apply bg-red-50 border-2 border-red-300 text-red-800 px-8 py-6 rounded-3xl mb-8 shadow-farmer text-farmer;
   }
   
   .alert-info {
-    @apply bg-blue-50 border border-blue-200 text-blue-800 px-6 py-4 rounded-xl mb-6;
+    @apply bg-blue-50 border-2 border-blue-300 text-blue-800 px-8 py-6 rounded-3xl mb-8 shadow-farmer text-farmer;
+  }
+  
+  .alert-warning {
+    @apply bg-yellow-50 border-2 border-yellow-300 text-yellow-800 px-8 py-6 rounded-3xl mb-8 shadow-farmer text-farmer;
   }
   
   .loading-spinner {
-    @apply inline-block w-6 h-6 border-4 border-gray-300 border-t-agri-green rounded-full animate-spin;
+    @apply inline-block w-8 h-8 border-4 border-gray-300 border-t-agri-green rounded-full animate-spin;
+  }
+  
+  .farmer-card-hover {
+    @apply hover:shadow-farmer-xl hover:-translate-y-2 hover:border-agri-accent;
+  }
+  
+  .farmer-gradient {
+    @apply bg-gradient-to-br from-agri-cream via-green-50 to-agri-light;
+  }
+  
+  .farmer-header {
+    @apply bg-gradient-to-r from-agri-green via-agri-accent to-agri-dark;
+  }
+  
+  .farmer-section {
+    @apply bg-white rounded-4xl shadow-farmer-lg p-10 border-2 border-agri-light;
+  }
+  
+  .farmer-icon-lg {
+    @apply w-16 h-16 text-agri-green;
+  }
+  
+  .farmer-icon-xl {
+    @apply w-20 h-20 text-agri-green;
   }
 }
 
 body {
-  @apply bg-gradient-to-br from-green-50 to-emerald-100 text-gray-800;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
+  @apply farmer-gradient text-gray-800;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  font-size: 18px; /* Base font size for better readability */
 }
 
-/* Focus styles for accessibility */
+/* Enhanced focus styles for accessibility */
 *:focus {
-  @apply outline-2 outline-agri-green outline-offset-2;
+  @apply outline-4 outline-agri-accent outline-offset-4;
+}
+
+/* Better button states */
+button:active {
+  @apply transform scale-95;
+}
+
+/* Improved touch targets for mobile */
+@media (max-width: 768px) {
+  .agri-button, .agri-button-secondary, .agri-button-outline {
+    @apply min-h-[72px] text-xl px-8 py-6;
+  }
+  
+  .agri-input, .agri-select {
+    @apply min-h-[72px] text-xl px-6 py-6;
+  }
+  
+  .nav-link {
+    @apply text-lg px-4 py-3;
+  }
+  
+  .nav-link-compact {
+    @apply text-base px-3 py-2;
+  }
+  
+  .lang-toggle {
+    @apply text-sm px-3 py-2;
+  }
+  
+  .lang-toggle-compact {
+    @apply text-xs px-2 py-1;
+  }
 }
 
 /* Reduced motion support */
@@ -95,11 +172,18 @@ body {
 
 /* High contrast mode */
 @media (prefers-contrast: high) {
-  .agri-button {
-    @apply border-2 border-white;
+  .agri-button, .agri-button-secondary {
+    @apply border-4 border-white;
   }
   
   .agri-input, .agri-select {
     @apply border-4;
+  }
+}
+
+/* Print styles */
+@media print {
+  .agri-button, .nav-link, .lang-toggle {
+    @apply shadow-none;
   }
 }

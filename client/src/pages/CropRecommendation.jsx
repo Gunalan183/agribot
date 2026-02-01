@@ -17,49 +17,61 @@ const CropRecommendation = ({ language }) => {
 
   const translations = {
     en: {
-      title: "Crop Recommendation",
+      title: "🌾 Crop Recommendation",
       subtitle: "Find the perfect crops for your farm conditions",
-      soilType: "Soil Type",
-      season: "Growing Season",
-      temperature: "Temperature (°C)",
-      rainfall: "Annual Rainfall (mm)",
-      submit: "Get Recommendations",
-      reset: "Reset Form",
+      soilType: "What type of soil do you have?",
+      season: "Which season are you planning for?",
+      temperature: "Average temperature in your area (°C)",
+      rainfall: "Annual rainfall in your area (mm)",
+      submit: "🔍 Find Best Crops",
+      reset: "🔄 Start Over",
       soilTypes: {
-        clay: "Clay Soil",
-        loamy: "Loamy Soil",
-        sandy: "Sandy Soil",
-        red: "Red Soil",
-        black: "Black Cotton Soil",
-        alluvial: "Alluvial Soil"
+        clay: "🟤 Clay Soil (Heavy, holds water well)",
+        loamy: "🟫 Loamy Soil (Best for most crops)",
+        sandy: "🟨 Sandy Soil (Drains quickly)",
+        red: "🔴 Red Soil (Good for cotton, sugarcane)",
+        black: "⚫ Black Cotton Soil (Rich in nutrients)",
+        alluvial: "🟩 Alluvial Soil (River deposited, fertile)"
       },
       seasons: {
-        kharif: "Kharif (Monsoon)",
-        rabi: "Rabi (Winter)",
-        "year-round": "Year Round"
+        kharif: "🌧️ Kharif (Monsoon Season - June to October)",
+        rabi: "❄️ Rabi (Winter Season - November to April)",
+        "year-round": "🌞 Year Round (Any time)"
+      },
+      helpText: {
+        soil: "Not sure about your soil type? Look at the color and feel the texture when wet.",
+        season: "Choose based on when you want to plant your crops.",
+        temperature: "Enter the average temperature during growing season.",
+        rainfall: "Enter the total rainfall your area receives in a year."
       }
     },
     ta: {
-      title: "பயிர் பரிந்துரை",
+      title: "🌾 பயிர் பரிந்துரை",
       subtitle: "உங்கள் பண்ணை நிலைமைகளுக்கு சரியான பயிர்களைக் கண்டுபிடியுங்கள்",
-      soilType: "மண் வகை",
-      season: "வளர்ச்சி பருவம்",
-      temperature: "வெப்பநிலை (°C)",
-      rainfall: "ஆண்டு மழைப்பொழிவு (மிமீ)",
-      submit: "பரிந்துரைகளைப் பெறுங்கள்",
-      reset: "படிவத்தை மீட்டமை",
+      soilType: "உங்களிடம் எந்த வகையான மண் உள்ளது?",
+      season: "எந்த பருவத்திற்கு நீங்கள் திட்டமிடுகிறீர்கள்?",
+      temperature: "உங்கள் பகுதியில் சராசரி வெப்பநிலை (°C)",
+      rainfall: "உங்கள் பகுதியில் ஆண்டு மழைப்பொழிவு (மிமீ)",
+      submit: "🔍 சிறந்த பயிர்களைக் கண்டுபிடியுங்கள்",
+      reset: "🔄 மீண்டும் தொடங்குங்கள்",
       soilTypes: {
-        clay: "களிமண்",
-        loamy: "லோமி மண்",
-        sandy: "மணல் மண்",
-        red: "சிவப்பு மண்",
-        black: "கருப்பு பருத்தி மண்",
-        alluvial: "அல்லுவியல் மண்"
+        clay: "🟤 களிமண் (கனமான, நீரை நன்றாக வைத்திருக்கும்)",
+        loamy: "🟫 லோமி மண் (பெரும்பாலான பயிர்களுக்கு சிறந்தது)",
+        sandy: "🟨 மணல் மண் (விரைவாக வடிகட்டும்)",
+        red: "🔴 சிவப்பு மண் (பருத்தி, கரும்புக்கு நல்லது)",
+        black: "⚫ கருப்பு பருத்தி மண் (ஊட்டச்சத்து நிறைந்தது)",
+        alluvial: "🟩 அல்லுவியல் மண் (ஆற்று படிவு, வளமான)"
       },
       seasons: {
-        kharif: "கார் (மழை)",
-        rabi: "ரபி (குளிர்காலம்)",
-        "year-round": "ஆண்டு முழுவதும்"
+        kharif: "🌧️ கார் (மழைக்காலம் - ஜூன் முதல் அக்டோபர்)",
+        rabi: "❄️ ரபி (குளிர்காலம் - நவம்பர் முதல் ஏப்ரல்)",
+        "year-round": "🌞 ஆண்டு முழுவதும் (எந்த நேரத்திலும்)"
+      },
+      helpText: {
+        soil: "உங்கள் மண் வகையைப் பற்றி உறுதியாக தெரியவில்லையா? நிறத்தைப் பார்த்து ஈரமாக இருக்கும்போது அமைப்பை உணருங்கள்.",
+        season: "நீங்கள் எப்போது பயிர்களை நடவு செய்ய விரும்புகிறீர்கள் என்பதன் அடிப்படையில் தேர்வு செய்யுங்கள்.",
+        temperature: "வளர்ச்சி பருவத்தில் சராசரி வெப்பநிலையை உள்ளிடவும்.",
+        rainfall: "உங்கள் பகுதி ஒரு வருடத்தில் பெறும் மொத்த மழைப்பொழிவை உள்ளிடவும்."
       }
     }
   };
@@ -124,24 +136,29 @@ const CropRecommendation = ({ language }) => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto">
-      <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-agri-dark mb-4">{t.title}</h1>
-        <p className="text-gray-600">{t.subtitle}</p>
+    <div className="max-w-7xl mx-auto">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl lg:text-5xl font-bold text-agri-dark mb-6">{t.title}</h1>
+        <p className="text-farmer-lg text-gray-600 max-w-3xl mx-auto">{t.subtitle}</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid lg:grid-cols-2 gap-12">
         {/* Input Form */}
-        <div className="bg-white rounded-2xl shadow-lg p-6">
-          <h2 className="text-xl font-bold text-agri-dark mb-6">
-            {language === 'en' ? 'Enter Your Farm Details' : 'உங்கள் பண்ணை விவரங்களை உள்ளிடவும்'}
-          </h2>
+        <div className="farmer-section">
+          <div className="flex items-center mb-8">
+            <div className="text-4xl mr-4">📝</div>
+            <h2 className="text-2xl font-bold text-agri-dark">
+              {language === 'en' ? 'Tell Us About Your Farm' : 'உங்கள் பண்ணையைப் பற்றி சொல்லுங்கள்'}
+            </h2>
+          </div>
           
-          <form onSubmit={handleSubmit} className="space-y-8">
+          <form onSubmit={handleSubmit} className="space-y-10">
             <div className="form-group">
-              <label className="form-label">
-                {t.soilType} *
+              <label className="form-label flex items-center">
+                <span className="mr-3">🌱</span>
+                {t.soilType}
               </label>
+              <p className="text-sm text-gray-600 mb-4">{t.helpText.soil}</p>
               <select
                 name="soilType"
                 value={formData.soilType}
@@ -150,7 +167,7 @@ const CropRecommendation = ({ language }) => {
                 required
               >
                 <option value="">
-                  {language === 'en' ? 'Select soil type' : 'மண் வகையைத் தேர்ந்தெடுக்கவும்'}
+                  {language === 'en' ? 'Choose your soil type...' : 'உங்கள் மண் வகையைத் தேர்ந்தெடுக்கவும்...'}
                 </option>
                 {soilTypes.map(soil => (
                   <option key={soil.value} value={soil.value}>{soil.label}</option>
@@ -159,9 +176,11 @@ const CropRecommendation = ({ language }) => {
             </div>
 
             <div className="form-group">
-              <label className="form-label">
-                {t.season} *
+              <label className="form-label flex items-center">
+                <span className="mr-3">📅</span>
+                {t.season}
               </label>
+              <p className="text-sm text-gray-600 mb-4">{t.helpText.season}</p>
               <select
                 name="season"
                 value={formData.season}
@@ -170,7 +189,7 @@ const CropRecommendation = ({ language }) => {
                 required
               >
                 <option value="">
-                  {language === 'en' ? 'Select growing season' : 'வளர்ச்சி பருவத்தைத் தேர்ந்தெடுக்கவும்'}
+                  {language === 'en' ? 'Choose planting season...' : 'நடவு பருவத்தைத் தேர்ந்தெடுக்கவும்...'}
                 </option>
                 {seasons.map(season => (
                   <option key={season.value} value={season.value}>{season.label}</option>
@@ -179,9 +198,11 @@ const CropRecommendation = ({ language }) => {
             </div>
 
             <div className="form-group">
-              <label className="form-label">
-                {t.temperature} *
+              <label className="form-label flex items-center">
+                <span className="mr-3">🌡️</span>
+                {t.temperature}
               </label>
+              <p className="text-sm text-gray-600 mb-4">{t.helpText.temperature}</p>
               <input
                 type="number"
                 name="temperature"
@@ -196,9 +217,11 @@ const CropRecommendation = ({ language }) => {
             </div>
 
             <div className="form-group">
-              <label className="form-label">
-                {t.rainfall} *
+              <label className="form-label flex items-center">
+                <span className="mr-3">🌧️</span>
+                {t.rainfall}
               </label>
+              <p className="text-sm text-gray-600 mb-4">{t.helpText.rainfall}</p>
               <input
                 type="number"
                 name="rainfall"
@@ -212,16 +235,16 @@ const CropRecommendation = ({ language }) => {
               />
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-6 pt-6">
               <button
                 type="submit"
                 disabled={loading}
-                className="agri-button flex-1 disabled:opacity-50 text-lg py-4"
+                className="agri-button flex-1 disabled:opacity-50 text-farmer-lg py-6"
               >
                 {loading ? (
                   <span className="flex items-center justify-center">
                     <div className="loading-spinner mr-3"></div>
-                    {language === 'en' ? 'Analyzing...' : 'பகுப்பாய்வு செய்கிறது...'}
+                    {language === 'en' ? 'Finding Best Crops...' : 'சிறந்த பயிர்களைக் கண்டுபிடிக்கிறது...'}
                   </span>
                 ) : t.submit}
               </button>
@@ -229,7 +252,7 @@ const CropRecommendation = ({ language }) => {
               <button
                 type="button"
                 onClick={handleReset}
-                className="px-8 py-4 border-3 border-agri-green text-agri-green rounded-xl font-semibold hover:bg-agri-green hover:text-white transition-all duration-300 text-lg"
+                className="agri-button-outline text-farmer-lg py-6 px-8"
               >
                 {t.reset}
               </button>
@@ -240,13 +263,13 @@ const CropRecommendation = ({ language }) => {
         {/* Results Section */}
         <div>
           {loading && (
-            <div className="bg-white rounded-2xl shadow-lg p-8">
-              <LoadingSpinner message={language === 'en' ? "Finding the best crops for your farm..." : "உங்கள் பண்ணைக்கு சிறந்த பயிர்களைக் கண்டுபிடிக்கிறது..."} />
+            <div className="farmer-section">
+              <LoadingSpinner message={language === 'en' ? "Analyzing your farm conditions and finding the perfect crops..." : "உங்கள் பண்ணை நிலைமைகளை பகுப்பாய்வு செய்து சரியான பயிர்களைக் கண்டுபிடிக்கிறது..."} />
             </div>
           )}
 
           {error && (
-            <div className="bg-white rounded-2xl shadow-lg p-6">
+            <div className="farmer-section">
               <ErrorMessage 
                 message={error} 
                 onRetry={handleSubmit}
@@ -264,37 +287,76 @@ const CropRecommendation = ({ language }) => {
           )}
 
           {!loading && !error && !result && (
-            <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
-              <div className="text-agri-green mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-700 mb-2">
-                {language === 'en' ? 'Ready to Get Started?' : 'தொடங்க தயாரா?'}
+            <div className="farmer-section text-center">
+              <div className="text-6xl mb-6">🌾</div>
+              <h3 className="text-2xl font-bold text-gray-700 mb-4">
+                {language === 'en' ? 'Ready to Find Your Perfect Crops?' : 'உங்கள் சரியான பயிர்களைக் கண்டுபிடிக்க தயாரா?'}
               </h3>
-              <p className="text-gray-600">
+              <p className="text-farmer text-gray-600 mb-8">
                 {language === 'en' 
-                  ? 'Fill in your farm details to get personalized crop recommendations.' 
-                  : 'தனிப்பட்ட பயிர் பரிந்துரைகளைப் பெற உங்கள் பண்ணை விவரங்களை நிரப்பவும்.'
+                  ? 'Fill in your farm details on the left to get personalized crop recommendations based on scientific data and local conditions.' 
+                  : 'அறிவியல் தரவு மற்றும் உள்ளூர் நிலைமைகளின் அடிப்படையில் தனிப்பட்ட பயிர் பரிந்துரைகளைப் பெற இடதுபுறத்தில் உங்கள் பண்ணை விவரங்களை நிரப்பவும்.'
                 }
               </p>
+              <div className="bg-agri-cream p-6 rounded-2xl border-2 border-agri-light">
+                <h4 className="font-bold text-agri-green mb-3 text-farmer-lg">
+                  {language === 'en' ? '💡 Pro Tip:' : '💡 சிறப்பு உதவிக்குறிப்பு:'}
+                </h4>
+                <p className="text-gray-700 text-farmer">
+                  {language === 'en' 
+                    ? 'The more accurate your information, the better recommendations you\'ll get!'
+                    : 'உங்கள் தகவல் எவ்வளவு துல்லியமாக இருக்கிறதோ, அவ்வளவு சிறந்த பரிந்துரைகளைப் பெறுவீர்கள்!'
+                  }
+                </p>
+              </div>
             </div>
           )}
         </div>
       </div>
 
       {/* Information Section */}
-      <div className="mt-12 bg-blue-50 rounded-2xl p-6">
-        <h3 className="text-lg font-semibold text-blue-800 mb-4">
-          {language === 'en' ? '💡 How It Works:' : '💡 எவ்வாறு இது வேலை செய்கிறது:'}
+      <div className="mt-16 farmer-section bg-gradient-to-r from-blue-50 to-green-50">
+        <h3 className="text-2xl font-bold text-agri-dark mb-8 text-center">
+          {language === 'en' ? '🔬 How Our Recommendations Work' : '🔬 எங்கள் பரிந்துரைகள் எவ்வாறு செயல்படுகின்றன'}
         </h3>
-        <ul className="text-blue-700 space-y-2">
-          <li>• {language === 'en' ? 'Our system analyzes your soil type, climate, and seasonal conditions' : 'எங்கள் கணினி உங்கள் மண் வகை, காலநிலை மற்றும் பருவ நிலைமைகளை பகுப்பாய்வு செய்கிறது'}</li>
-          <li>• {language === 'en' ? 'Matches your conditions with optimal crop requirements' : 'உங்கள் நிலைமைகளை சிறந்த பயிர் தேவைகளுடன் பொருத்துகிறது'}</li>
-          <li>• {language === 'en' ? 'Provides scientifically-backed recommendations' : 'அறிவியல் ரீதியாக ஆதரிக்கப்பட்ட பரிந்துரைகளை வழங்குகிறது'}</li>
-          <li>• {language === 'en' ? 'Includes fertilizer advice and growing tips' : 'உர ஆலோசனை மற்றும் வளர்ச்சி உதவிக்குறிப்புகள் சேர்க்கப்பட்டுள்ளன'}</li>
-        </ul>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="text-center p-6 bg-white rounded-2xl shadow-farmer">
+            <div className="text-3xl mb-4">🌱</div>
+            <h4 className="font-bold text-agri-green mb-2">
+              {language === 'en' ? 'Soil Analysis' : 'மண் பகுப்பாய்வு'}
+            </h4>
+            <p className="text-sm text-gray-600">
+              {language === 'en' ? 'Match crops to your soil type' : 'உங்கள் மண் வகைக்கு பயிர்களைப் பொருத்துங்கள்'}
+            </p>
+          </div>
+          <div className="text-center p-6 bg-white rounded-2xl shadow-farmer">
+            <div className="text-3xl mb-4">🌡️</div>
+            <h4 className="font-bold text-agri-green mb-2">
+              {language === 'en' ? 'Climate Check' : 'காலநிலை சரிபார்ப்பு'}
+            </h4>
+            <p className="text-sm text-gray-600">
+              {language === 'en' ? 'Consider temperature & rainfall' : 'வெப்பநிலை மற்றும் மழைப்பொழிவைக் கருத்தில் கொள்ளுங்கள்'}
+            </p>
+          </div>
+          <div className="text-center p-6 bg-white rounded-2xl shadow-farmer">
+            <div className="text-3xl mb-4">📊</div>
+            <h4 className="font-bold text-agri-green mb-2">
+              {language === 'en' ? 'Data Science' : 'தரவு அறிவியல்'}
+            </h4>
+            <p className="text-sm text-gray-600">
+              {language === 'en' ? 'AI-powered recommendations' : 'AI-இயக்கும் பரிந்துரைகள்'}
+            </p>
+          </div>
+          <div className="text-center p-6 bg-white rounded-2xl shadow-farmer">
+            <div className="text-3xl mb-4">🎯</div>
+            <h4 className="font-bold text-agri-green mb-2">
+              {language === 'en' ? 'Best Results' : 'சிறந்த முடிவுகள்'}
+            </h4>
+            <p className="text-sm text-gray-600">
+              {language === 'en' ? 'Maximize your yield potential' : 'உங்கள் விளைச்சல் திறனை அதிகரிக்கவும்'}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
