@@ -17,6 +17,9 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 // Serve static files for uploaded images
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+// Serve static files from React build
+app.use(express.static(path.join(__dirname, '../client/dist')));
+
 // Create uploads directory if it doesn't exist
 const uploadsDir = path.join(__dirname, 'uploads');
 if (!fs.existsSync(uploadsDir)) {
@@ -42,6 +45,27 @@ app.get('/', (req, res) => {
     });
 });
 
+// Serve React app for all non-API routes
+app.get('*', (req, res) => {
+    // Don't serve React app for API routes
+    if (req.path.startsWith('/api')) {
+        return res.status(404).json({
+            success: false,
+            message: 'API route not found!'
+        });
+    }
+    
+    const indexPath = path.join(__dirname, '../client/dist/index.html');
+    if (fs.existsSync(indexPath)) {
+        res.sendFile(indexPath);
+    } else {
+        res.status(404).json({
+            success: false,
+            message: 'React app not built. Please run npm run build first.'
+        });
+    }
+});
+
 // Error handling middleware
 app.use((err, req, res, next) => {
     console.error('Error:', err.message);
@@ -61,14 +85,6 @@ app.use((err, req, res, next) => {
         success: false,
         message: err.message || 'Something went wrong!',
         error: process.env.NODE_ENV === 'development' ? err.stack : {}
-    });
-});
-
-// 404 handler
-app.use((req, res) => {
-    res.status(404).json({
-        success: false,
-        message: 'Route not found!'
     });
 });
 

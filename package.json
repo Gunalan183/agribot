@@ -1,7 +1,26 @@
 {
+  "name": "agribot",
+  "version": "1.0.0",
+  "description": "Intelligent Chatbot for Farmers",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "build": "cd client && npm install && npm run build",
+    "install-server": "cd server && npm install",
+    "install-client": "cd client && npm install",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "autoprefixer": "^10.4.23",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }

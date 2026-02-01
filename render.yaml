@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: agribot
+    env: node
+    plan: free
+    buildCommand: npm install && npm run install-server && npm run install-client && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        fromService:
+          type: web
+          name: agribot
+          property: port
+    healthCheckPath: /api/health
